@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Heading</title>
+    <title>Diablo</title>
     <style>
         body {
-            background-color: rgb(36, 37, 38);
-            color: white;
+            background-color: rgb(36, 37, 38); /* RGB(242526) is not valid, using closest RGB value */
+            color: #aa8dd8;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
         h1 {
             text-align: center;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <h1>Diablo client</h1>
+    <img src="https://imgur.com/a/mKbABJN" alt="Image">
 </body>
 </html>
