@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diablo Client <3</title>
+    <title>Diablo <3</title>
     <style>
         body {
-            background-color: rgb(36, 37, 38);
+            background-color: rgb(36, 37, 38); /* RGB(242526) is not valid, using closest RGB value */
             color: #aa8dd8;
             display: flex;
             justify-content: center;
@@ -15,18 +15,23 @@
             margin: 0;
             font-family: Arial, sans-serif;
             flex-direction: column;
-            animation: fadein 2s; 
+            overflow: hidden;
+            position: relative;
         }
         h1 {
             text-align: center;
             margin-bottom: 10px;
             animation: fadein 2s;
+            position: relative;
+            z-index: 1;
         }
         p {
             font-size: 14px;
             margin-top: 0;
             margin-bottom: 20px;
             animation: fadein 2s;
+            position: relative;
+            z-index: 1;
         }
         button {
             background-color: #aa8dd8;
@@ -38,28 +43,69 @@
             border-radius: 5px;
             text-decoration: none;
             animation: fadein 2s;
+            position: relative;
+            z-index: 1;
+            margin-left: 10px;
         }
         button:hover {
             background-color: #9a7cc8;
         }
         img {
-            max-width: 150px; 
-            height: 150px;
+            max-width: 100px;
+            height: auto;
             margin-bottom: 10px;
             animation: fadein 2s;
+            position: relative;
+            z-index: 1;
         }
         @keyframes fadein {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #about-diablo {
+            display: none;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
-    <img src="https://images.emojiterra.com/twitter/512px/1f608.png" alt="Image">
-    <h1>Diablo Client</h1>
-    <p>Made by Vince, Tanner, and Syuto</p>
-    <a href="https://discord.gg/3WwF7W3t5P">
-        <button>Join Discord</button>
-    </a>
+    <div id="content">
+        <img src="https://images.emojiterra.com/twitter/512px/1f608.png" alt="Image">
+        <h1>Diablo Client</h1>
+        <p>Made by Vince, Tanner, and Syuto</p>
+        <div>
+            <a href="https://discord.gg/3WwF7W3t5P">
+                <button>Join Discord</button>
+            </a>
+            <button onclick="showAbout()">About Diablo</button>
+        </div>
+    </div>
+    <div id="about-diablo">
+        <h1>About Diablo</h1>
+        <p>Diablo client is a client made by, Vince, Tanner, and Syuto, which costs 20$ and offers the best customer service and quality.</p>
+        <ul>
+            <li><strong>Vince:</strong> https://e-z.bio/devvince</li>
+            <li><strong>Tanner:</strong> https://e-z.bio/Tanner</li>
+            <li><strong>Syuto:</strong> https://e-z.bio/syuto</li>
+        </ul>
+        <button onclick="hideAbout()">Back</button>
+    </div>
+
+    <script>
+        function showAbout() {
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('about-diablo').style.display = 'block';
+        }
+
+        function hideAbout() {
+            document.getElementById('about-diablo').style.display = 'none';
+            document.getElementById('content').style.display = 'flex';
+        }
+    </script>
 </body>
 </html>
