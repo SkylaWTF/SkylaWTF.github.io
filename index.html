@@ -66,10 +66,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            animation: fadein 2s;
         }
         #about-diablo {
             display: none;
-            color: #ffffff;
+            color: #aa8dd8;
+            animation: fadein 2s;
+        }
+        a {
+            color: #aa8dd8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -87,11 +96,11 @@
     </div>
     <div id="about-diablo">
         <h1>About Diablo</h1>
-        <p>Diablo client is a client made by, Vince, Tanner, and Syuto, which costs 20$ and offers the best customer service and quality.</p>
+        <p>Diablo client is a client made by, Vince, Tanner, and Syuto, which costs 15$ and offers the best quality client for hypixel and multiserver.</p>
         <ul>
-            <li><strong>Vince:</strong> https://e-z.bio/devvince</li>
-            <li><strong>Tanner:</strong> https://e-z.bio/Tanner</li>
-            <li><strong>Syuto:</strong> https://e-z.bio/syuto</li>
+            <li><strong>Vince:</strong> <a href="https://e-z.bio/devvince">https://e-z.bio/devvince</a></li>
+            <li><strong>Tanner:</strong> <a href="https://e-z.bio/Tanner">https://e-z.bio/Tanner</a></li>
+            <li><strong>Syuto:</strong> <a href="https://e-z.bio/syuto">https://e-z.bio/syuto</a></li>
         </ul>
         <button onclick="hideAbout()">Back</button>
     </div>
